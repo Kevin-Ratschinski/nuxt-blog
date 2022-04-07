@@ -6,10 +6,14 @@ module.exports = {
   },
   extends: [
     '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended',
+    'plugin:nuxt/recommended'
   ],
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'vue/multi-word-component-names': ['error', {
+      ignores: ['default']
+    }]
+  }
 }

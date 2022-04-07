@@ -1,21 +1,22 @@
 <template>
-<div class="container mx-auto">
-  <h1 class="my-8 text-5xl font-bold">
-    Mein Blog
-  </h1>
+  <div class="container mx-auto">
+    <h1 class="my-8 text-5xl font-bold">
+      Mein Blog
+    </h1>
 
-  <Article
-    v-for="article in articles"
-    :key="article.id"
-    :category="article.category"
-    :date="formatDate(article.createdAt)"
-    :to="article.slug">
-  <template #title>
-    {{ article.title }}
-  </template>
-  {{ article.description }}
-  </Article>
-</div>
+    <Article
+      v-for="article in articles"
+      :key="article.id"
+      :category="article.category"
+      :date="formatDate(article.createdAt)"
+      :to="article.slug"
+    >
+      <template #title>
+        {{ article.title }}
+      </template>
+      {{ article.description }}
+    </Article>
+  </div>
 </template>
 
 <script lang="ts">
